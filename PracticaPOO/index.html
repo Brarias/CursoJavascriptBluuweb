@@ -12,6 +12,61 @@
 
 <body>
 
+  <main class="container my-5">
+    <h1>Estudiantes y profesores</h1>
+    <form id="formulario">
+      <input type="text" class="form-control mb-2" value="Juanito" name="nombre" placeholder="Ingrese nombre" required>
+      <input type="number" class="form-control mb-2" value="25" name="edad" placeholder="Ingrese edad" required>
+
+      <select class="form-select mb-2" name="opcion" aria-label="Default select example">
+
+        <option value="Estudiante" selected>Estudiante</option>
+        <option value="Profesor">Profesor</option>
+
+      </select>
+
+      <button class="btn btn-primary" type="submit">Agregar</button>
+    </form>
+
+    <section class="row mt-3">
+      <div class="col-6" id="cardEstudiantes">
+
+      </div>
+      <div class="col-6" id="cardProfesores">
+
+      </div>
+    </section>
+
+    <template id="template-estudiante">
+      <article class="card mb-2">
+        <div class="card-body">
+          <h5>
+            <span class="text-primary"></span>
+            <span class="badge bg-success"></span>
+
+          </h5>
+          <h6></h6>
+          <p class="lead" id="edadEst"></p>
+          <button class="btn btn-success">Aprobar</button>
+          <button class="btn btn-danger">Reprobar</button>
+
+        </div>
+      </article>
+    </template>
+    <template id="template-profesor">
+      <article class="card mb-2 bg-dark text-white">
+        <div class="card-body">
+          <h5>
+            <span class="text-secondary"></span>
+
+          </h5>
+          <h6></h6>
+          <p class="lead" id="edadPro"></p>
+        </div>
+      </article>
+    </template>
+
+  </main>
 
   <script src="app.js"></script>
 </body>
